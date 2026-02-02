@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Jump Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">ALIEN JUMP GAME</h1>
+        <div class="game-info">
+            <div class="info-item">Score: <span id="score">0</span></div>
+            <div class="info-item">Jumps: <span id="jumps">0</span>/90</div>
+            <div class="info-item">Speed: <span id="speed">1.0</span>x</div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <div class="controls">
+            <p>Press <strong>SPACEBAR</strong> or <strong>UP ARROW</strong> to jump</p>
+            <button id="startBtn">START GAME</button>
+            <button id="restartBtn" style="display: none;">RESTART</button>
+        </div>
+        <div id="gameOver" class="game-over" style="display: none;">
+            <h2>MISSION COMPLETE!</h2>
+            <p>You successfully jumped over 90 animals!</p>
+            <p>Final Score: <span id="finalScore">0</span></p>
+        </div>
+        <div id="collision" class="collision-msg" style="display: none;">
+            <h2>GAME OVER!</h2>
+            <p>You hit an animal!</p>
+            <p>Score: <span id="collisionScore">0</span></p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
